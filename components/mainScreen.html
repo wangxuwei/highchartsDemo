@@ -1,0 +1,52 @@
+<script type="text/javascript">
+snow.ui.registerComponent("mainScreen", 
+	{
+    parent: "#page",
+	unique: true
+	}, 
+	{
+	build: function(){
+		var $e = $("#tmpl-mainScreen").render({});
+		return $e;
+	}, 
+	postDisplay: function(){
+		var thisC = this;
+		var $element = this.$element;
+		
+		var chart1 = new Highcharts.Chart({
+			chart: {
+				renderTo: 'container',
+				type: 'bar'
+			},
+			title: {
+				text: 'Fruit Consumption'
+			},
+			xAxis: {
+				categories: ['Apples', 'Bananas', 'Oranges']
+			},
+			yAxis: {
+				title: {
+					text: 'Fruit eaten'
+				}
+			},
+			credits: {
+				enabled: false
+			},
+			series: [
+				{
+				name: 'Jane',
+				data: [1, 0, 4]
+				}, {
+				name: 'John',
+				data: [5, 7, 3]
+				}
+			]
+		});
+	}
+});
+
+</script>
+
+<script id="tmpl-mainScreen" type="text/html">
+	<div id="container" class="chart"></div>
+</script>

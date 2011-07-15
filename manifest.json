@@ -1,0 +1,13 @@
+{
+  "name": "HighchartsDemo",
+  "description": "This is a Hightcharts Demo with snowUI",
+  "version": "0.1",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "permissions": [
+    "unlimitedStorage"
+  ]
+}
